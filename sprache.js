@@ -1,10 +1,10 @@
 // Zeigt die Sprache aus ?lang=…, sonst die Sprache des Geräts, sonst Englisch.
+// Erlaubt ist jede Sprache, für die es auf der Seite einen Abschnitt (data-lang) gibt – so kann eine
+// Seite Französisch haben (Datenschutz, seit 04.11.2026), während eine andere es noch nicht hat.
 // Sprungmarken (#4ears, #krise …) zeigen auf data-anker in der sichtbaren Sprache.
 (function () {
-  var erlaubt = ['de', 'en', 'es'];
   var aus = new URLSearchParams(location.search).get('lang');
   var geraet = (navigator.language || 'en').slice(0, 2);
-  var lang = erlaubt.indexOf(aus) >= 0 ? aus : erlaubt.indexOf(geraet) >= 0 ? geraet : 'en';
   document.documentElement.classList.add('js');
   function zeigen(l) {
     document.documentElement.lang = l;
@@ -25,6 +25,7 @@
     document.querySelectorAll('.sprachen button').forEach(function (b) {
       b.addEventListener('click', function () { zeigen(b.value); history.replaceState(null, '', '?lang=' + b.value + location.hash); });
     });
-    zeigen(lang);
+    var erlaubt = Array.prototype.map.call(document.querySelectorAll('article[data-lang]'), function (a) { return a.dataset.lang; });
+    zeigen(erlaubt.indexOf(aus) >= 0 ? aus : erlaubt.indexOf(geraet) >= 0 ? geraet : 'en');
   });
 })();
