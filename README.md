@@ -7,10 +7,10 @@ GitHub Pages unter **https://apps.markovijeko.de** (Datei `CNAME`).
 - `hilfe.html` – Kontakt, häufige Fragen pro App (`#4ears`, `#myday`, …), Hilfe in Krisen (`#krise`)
 - `datenschutz.html` – allgemeiner Teil (`#allgemein`) + ein Abschnitt pro App (`#4ears`, …)
 
-Alle Seiten in Deutsch, Englisch und Spanisch (`sprache.js`, `?lang=de|en|es`). Sprungmarken
+Alle Seiten in Deutsch, Englisch, Spanisch und Französisch (`sprache.js`, `?lang=de|en|es|fr`; erlaubt ist jede Sprache mit eigenem `<article data-lang>`). Sprungmarken
 stehen als `data-anker` im jeweiligen Sprachabschnitt, nicht als `id`.
 
-**Neue App hinzufügen:** in allen drei Sprachen je eine Kachel in `index.html`, einen
+**Neue App hinzufügen:** in allen vier Sprachen je eine Kachel in `index.html`, einen
 `<section data-anker="…">` in `hilfe.html` und `datenschutz.html` und einen Link im Inhalt oben.
 In App Store Connect dann `https://apps.markovijeko.de/datenschutz.html#<app>` als
 Datenschutz-URL und `https://apps.markovijeko.de/hilfe.html#<app>` als Support-URL eintragen.
