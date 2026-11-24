@@ -16,5 +16,5 @@ stehen als `data-anker` im jeweiligen Sprachabschnitt, nicht als `id`.
 In App Store Connect dann `https://apps.markovijeko.de/datenschutz.html#<app>` als
 Datenschutz-URL und `https://apps.markovijeko.de/hilfe.html#<app>` als Support-URL eintragen.
 
-Krisennummern: Quelle und Prüfung in `docs/HINWEISE-PSYCHE.md` im Repo `marko-vijeko/OhrenApp`.
+Krisennummern: Quelle und Prüfung in `docs/HINWEISE-PSYCHE.md` im Repo `marko-vijeko/4EARS`.
 Keine Cookies, keine fremden Inhalte; die Schrift Lexend liegt in `fonts/` (OFL).
